@@ -151,3 +151,8 @@ uv run python analyze_video.py
 ## 📧 聯絡方式
 
 如有問題或建議，請開啟 Issue 討論。
+
+## 📚 參考資源
+
+- [Azure Content Understanding - REST API 快速入門](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/quickstart/use-rest-api?tabs=document)
+- [Azure Content Understanding - 預建分析器](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/concepts/prebuilt-analyzers)
