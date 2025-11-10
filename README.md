@@ -1,5 +1,7 @@
 # Azure Content Understanding 分析工具
 
+> 📅 **更新日期：2025/11/10**
+
 本專案使用 Azure Content Understanding API 來分析不同類型媒體檔案，包括文件、圖片、音訊和影片的內容分析。
 
 ## 🚀 功能特色
@@ -13,7 +15,7 @@
 
 ```
 azure-content-understanding/
-├── .env                     # 環境變數設定檔（包含 API 金鑰，不納入版控）
+├── .env                     # 環境變數設定檔（請從 `.env_example` 做修改）
 ├── .gitignore               # Git 忽略檔案設定
 ├── pyproject.toml           # Python 專案設定檔
 ├── README.md                # 專案說明文件
@@ -43,6 +45,13 @@ azure-content-understanding/
 3. 在左側導覽列中找到 **Content Understanding** 服務
 4. 複製 **Endpoint**（端點）和 **Key**（金鑰）
 
+> ⚠️ **支援地區**：Azure Content Understanding 目前支援以下地區：
+> - `australiaeast` (澳洲東部)
+> - `swedencentral` (瑞典中部)
+> - `westus` (美國西部)
+> 
+> 建立資源時請選擇其中一個支援的地區。
+
 ![Azure AI Foundry Portal - 取得 API 金鑰](azure-ai-foundry-portal.jpg)
 
 > 💡 **提示**：請妥善保管您的 API 金鑰，不要將其提交到版本控制系統中。
@@ -51,7 +60,7 @@ azure-content-understanding/
 
 1. **Clone 此專案**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ownway22/azure-content-understanding.git
    cd azure-content-understanding
    ```
 
@@ -78,7 +87,7 @@ azure-content-understanding/
    KEY="your-api-key-here"
    ```
    
-   其他設定（分析器 ID 和範例檔案 URL）通常不需要修改，除非您想使用自己的檔案。
+   其他設定（分析器 ID 和範例檔案 URL）通常不需要修改，除非您想使用自己的檔案，並確保檔案 URL 可公開存取。
 
 ## 🚀 使用方式
 
@@ -156,3 +165,4 @@ uv run python analyze_video.py
 
 - [Azure Content Understanding - REST API 快速入門](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/quickstart/use-rest-api?tabs=document)
 - [Azure Content Understanding - 預建分析器](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/concepts/prebuilt-analyzers)
+- [Azure Content Understanding - 語言與地區支援](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/language-region-support)
