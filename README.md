@@ -1,6 +1,6 @@
 # Azure Content Understanding 分析工具
 
-這是一個使用 Azure Content Understanding API 來分析不同類型媒體檔案的 Python 專案。支援文件、圖片、音訊和影片的內容分析。
+本專案使用 Azure Content Understanding API 來分析不同類型媒體檔案，包括文件、圖片、音訊和影片的內容分析。
 
 ## 🚀 功能特色
 
@@ -13,7 +13,7 @@
 
 ```
 azure-content-understanding/
-├── .env                      # 環境變數設定檔（包含 API 金鑰，不納入版控）
+├── .env                     # 環境變數設定檔（包含 API 金鑰，不納入版控）
 ├── .gitignore               # Git 忽略檔案設定
 ├── pyproject.toml           # Python 專案設定檔
 ├── README.md                # 專案說明文件
@@ -22,10 +22,10 @@ azure-content-understanding/
 ├── analyze_audio.py         # 🎵 音訊分析程式
 ├── analyze_video.py         # 🎬 影片分析程式
 └── output/                  # 分析結果輸出資料夾
-    ├── doc_result_*.json    # 文件分析結果
-    ├── img_result_*.json    # 圖片分析結果
-    ├── audio_result_*.json  # 音訊分析結果
-    └── video_result_*.json  # 影片分析結果
+    ├── doc_result_{timestamp}.json    # 文件分析結果
+    ├── img_result_{timestamp}.json    # 圖片分析結果
+    ├── audio_result_{timestamp}.json  # 音訊分析結果
+    └── video_result_{timestamp}.json  # 影片分析結果
 ```
 
 ## 🛠️ 環境需求
@@ -111,6 +111,14 @@ uv run python analyze_video.py
 - 影片：`video_result_YYYYMMDD_HHMMSS.json`
 
 結果會同時在終端機顯示（pretty print）並儲存至 `output/` 資料夾。
+
+### 執行結果範例
+
+成功執行完四個 Python 程式碼後，將在 `output/` 資料夾中看到對應的 JSON 檔案：
+
+![分析結果輸出檔案](analyzer-output-results.jpg)
+
+如圖所示，每個分析器執行後都會產生帶有時間戳記的 JSON 檔案，方便追蹤和管理不同時間點的分析結果。
 
 ## 🔧 主要相依套件
 
