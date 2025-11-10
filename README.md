@@ -34,7 +34,20 @@ azure-content-understanding/
 - uv (Python 套件管理工具)
 - Azure Content Understanding API 金鑰
 
-## 📦 安裝步驟
+## � 取得 Azure Content Understanding API 金鑰
+
+在開始使用前，您需要先在 Azure AI Foundry Portal 建立 Azure Content Understanding 服務並取得 API 金鑰：
+
+1. 前往 [Azure AI Foundry Portal](https://ai.azure.com/)
+2. 建立或選擇您的專案
+3. 在左側導覽列中找到 **Content Understanding** 服務
+4. 複製 **Endpoint**（端點）和 **Key**（金鑰）
+
+![Azure AI Foundry Portal - 取得 API 金鑰](azure-ai-foundry-portal.jpg)
+
+> 💡 **提示**：請妥善保管您的 API 金鑰，不要將其提交到版本控制系統中。
+
+## �📦 安裝步驟
 
 1. **Clone 此專案**
    ```bash

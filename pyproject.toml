@@ -2,6 +2,9 @@
 name = "azure-content-understanding"
 version = "0.1.0"
 description = "Azure Content Understanding Document Analysis"
+authors = [
+    {name = "Frank Lin", email = "yu-hong.lin@microsoft.com"}
+]
 requires-python = ">=3.8"
 dependencies = [
     "requests>=2.31.0",
